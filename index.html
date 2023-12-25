@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-top:  100px;
+            background: white;
+        }
+
+        .button {
+            padding: 10px;
+            width: auto;
+            height: 20px;
+            text-align: center;
+        }
+
+        .button button {
+            height: 35px;
+            width: 100px;
+            font-size: 25px;
+            border: none;
+            background-color: #6700a3;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .no {
+            position: relative;
+            left: -50px;
+
+        }
+
+        .no:hover {
+            left: 104px;
+        }
+
+
+        .image {
+
+            height: 300px;
+            width: auto;
+        }
+
+        .image img {
+            height: 300px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .para {
+            text-align: center;
+            font-size: 35px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img id="myImg" src="durarara-aoba-kuronuma.gif">
+    </div>
+    <div class="para">
+        <p id="text">Can I take you out for coffee? 🌹</p>
+    </div>
+    <div class="button" id="btn">
+        <button class="no">No</button>
+        <button class="yes" id="yes">yes</button>
+
+    </div>
+    <script>
+        const myImg = document.getElementById("myImg");
+        const myButton = document.getElementById("yes");
+        const text = document.getElementById("text");
+        const btn = document.getElementById("btn");
+
+        myButton.addEventListener("click", function () {
+            myImg.src = "happy-dance.gif";
+            text.innerHTML = "Yeeyy ! Finaly" ;
+            btn.remove();
+        });
+    </script>
+</body>
+
+</html>
